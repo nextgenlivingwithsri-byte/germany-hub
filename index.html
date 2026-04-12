@@ -3,162 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGen Living | Germany Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>videsi-Srinivas | Study & Work in Germany</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* --- GLOBAL THEME --- */
-        body { margin: 0; font-family: 'Poppins', sans-serif; color: #fff; line-height: 1.6; background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #312e81 100%); background-attachment: fixed; }
-        .container { max-width: 1200px; margin: auto; padding: 60px 20px; text-align: center; }
+        :root { --primary: #004a99; --accent: #e53e3e; --text-dark: #1a202c; --text-light: #4a5568; --bg-gray: #f8fafc; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--text-dark); line-height: 1.6; }
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
         
-        /* --- TEXT & TITLES --- */
-        h1, h2, h3 { font-weight: 700; color: #fff; margin-bottom: 10px; }
-        h1 { font-size: 3rem; background: linear-gradient(to right, #2dd4bf, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-top: 10px; }
-        .subtitle { font-size: 1.2rem; color: #cbd5e1; max-width: 700px; margin: auto; margin-bottom: 40px; font-weight: 300; }
-        .section-header { font-size: 2.5rem; margin-top: 80px; margin-bottom: 10px; }
-        
-        /* --- BUTTONS --- */
-        .btn { display: inline-block; padding: 15px 35px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: 0.3s; position: relative; overflow: hidden; }
-        /* Main Call to Action Button: Teal Gradient */
-        .btn-main { background: linear-gradient(45deg, #2dd4bf, #0d9488); color: #fff; box-shadow: 0 4px 15px rgba(45, 212, 191, 0.3); }
-        .btn-main:hover { box-shadow: 0 8px 25px rgba(45, 212, 191, 0.5); transform: translateY(-2px); }
-        
-        /* Standard Card Button: Indigo Gradient */
-        .btn-card { background: linear-gradient(45deg, #4f46e5, #3730a3); color: #fff; font-size: 0.9rem; padding: 10px 25px; margin-top: 15px; }
-        
-        /* Green Chat on WhatsApp Button */
-        .btn-whatsapp { background: linear-gradient(45deg, #22c55e, #16a34a); color: #fff; }
+        /* Navigation Style Header */
+        nav { display: flex; justify-content: space-between; align-items: center; padding-bottom: 40px; border-bottom: 1px solid #e2e8f0; margin-bottom: 60px; }
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); }
+        .logo span { color: var(--accent); }
 
-        /* --- THE HERO & COMMUNITY COUNTER --- */
-        header { padding-bottom: 60px; position: relative; }
-        .community-badge { background: rgba(255, 255, 255, 0.1); display: inline-block; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; color: #a5b4fc; border: 1px solid rgba(255, 255, 255, 0.1); }
-        .yt-counter { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); width: 320px; margin: 60px auto; padding: 25px; border-radius: 20px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        .yt-counter .label { font-size: 0.75rem; text-transform: uppercase; color: #94a3b8; font-weight: 600; text-align: center; display: block; margin-bottom: 15px; }
-        .yt-flex { display: flex; align-items: center; gap: 15px; }
-        .yt-flex img { width: 50px; height: 50px; border-radius: 50%; }
-        .yt-flex .name { font-weight: 600; font-size: 1.1rem; }
-        .yt-flex .count { font-size: 2rem; font-weight: 700; color: #fff; }
-
-        /* --- GRIDS & CARDS --- */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .glass-card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 24px; padding: 35px; text-align: left; transition: all 0.3s ease-in-out; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
-        .glass-card:hover { transform: translateY(-8px); background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(45, 212, 191, 0.4); box-shadow: 0 15px 40px rgba(0,0,0,0.4); }
-        .glass-card:hover h3 { color: #2dd4bf; }
-        .glass-card h3 { color: #fff; font-size: 1.4rem; transition: 0.3s; margin-top: 15px; }
-        .glass-card p { color: #cbd5e1; font-size: 0.95rem; font-weight: 300; flex-grow: 1; margin-bottom: 20px; }
+        /* Hero Section */
+        .hero { text-align: center; margin-bottom: 80px; }
+        .badge { background: #ebf4ff; color: var(--primary); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; display: inline-block; margin-bottom: 20px; text-transform: uppercase; }
+        h1 { font-size: 3.5rem; line-height: 1.1; margin: 10px 0; font-weight: 800; color: var(--text-dark); }
+        .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 800px; margin: 20px auto 40px; }
         
-        /* Icons for cards */
-        .card-icon { font-size: 2.5rem; background: linear-gradient(135deg, #a5b4fc, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 14px 32px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: 0.2s; cursor: pointer; }
+        .btn-primary { background: var(--primary); color: white; border: none; }
+        .btn-primary:hover { background: #003a7a; transform: translateY(-2px); }
+        .btn-outline { border: 2px solid #e2e8f0; color: var(--text-dark); }
+        .btn-outline:hover { background: var(--bg-gray); }
 
-        /* --- THE ENGAGING FOOTER & CONNECT SECTION --- */
-        .footer-section { background: rgba(15, 23, 42, 0.6); margin-top: 100px; padding: 80px 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
-        .footer-flex { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; max-width: 1000px; margin: auto; }
-        .footer-text { text-align: left; flex: 1; min-width: 300px; }
-        .footer-text h2 { font-size: 2.2rem; }
-        .footer-text p { color: #cbd5e1; font-weight: 300; }
-        .footer-cta { background: white; color: #1e293b; padding: 40px; border-radius: 24px; box-shadow: 0 15px 50px rgba(0,0,0,0.3); text-align: center; width: 300px; }
-        .footer-cta .contact-line { font-weight: 600; font-size: 0.9rem; text-transform: uppercase; color: #64748b; }
-        .footer-cta .phone { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin: 10px 0 20px 0; display: block; }
-        .copyright { margin-top: 60px; color: #64748b; font-size: 0.8rem; font-weight: 300; }
+        /* YouTube Live Stats Section */
+        .yt-preview { background: var(--bg-gray); border-radius: 24px; padding: 40px; margin: 40px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 30px; text-align: left; border: 1px solid #e2e8f0; }
+        .yt-info { display: flex; align-items: center; gap: 20px; }
+        .yt-info img { width: 80px; height: 80px; border-radius: 50%; border: 3px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .yt-stats .name { font-size: 1.5rem; font-weight: 800; color: var(--text-dark); margin: 0; }
+        .yt-stats .sub-count { font-size: 2.5rem; font-weight: 800; color: var(--primary); display: block; line-height: 1; margin: 5px 0; }
+        .yt-stats .label { color: var(--text-light); font-size: 0.9rem; font-weight: 600; }
 
-        /* Responsive adjustments for phone screens */
-        @media (max-width: 768px) { h1 { font-size: 2.2rem; } .section-header { font-size: 1.8rem; } .footer-flex { flex-direction: column; text-align: center; } .footer-text { text-align: center; } }
+        /* Content Grid */
+        .section-title { font-size: 2rem; font-weight: 800; margin-bottom: 40px; text-align: left; border-left: 5px solid var(--accent); padding-left: 15px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        
+        .resource-card { background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 32px; transition: 0.3s; text-decoration: none; display: flex; flex-direction: column; }
+        .resource-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); border-color: var(--primary); }
+        .card-tag { color: var(--accent); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 12px; display: block; }
+        .resource-card h3 { margin: 0 0 12px 0; font-size: 1.4rem; color: var(--text-dark); }
+        .resource-card p { color: var(--text-light); font-size: 1rem; flex-grow: 1; margin-bottom: 24px; }
+        .card-link { color: var(--primary); font-weight: 700; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+
+        /* Footer / Community Support */
+        .community-footer { background: var(--text-dark); color: white; border-radius: 24px; padding: 60px; margin-top: 100px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px; }
+        .footer-content { flex: 1; min-width: 300px; text-align: left; }
+        .footer-content h2 { font-size: 2.25rem; margin-bottom: 15px; }
+        .footer-content p { font-size: 1.1rem; color: #a0aec0; }
+        .footer-action { background: white; padding: 35px; border-radius: 16px; text-align: center; min-width: 280px; color: var(--text-dark); }
+        .wa-link { background: #25d366; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; display: block; margin-top: 20px; font-weight: 700; transition: 0.2s; }
+        .wa-link:hover { background: #1eb954; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .yt-preview, .community-footer { padding: 30px; text-align: center; }
+            .yt-info { flex-direction: column; }
+            .footer-content { text-align: center; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="community-badge">Join over 10,000+ Students</div>
-            <h1>Your Gateway to<br>Germany & Europe</h1>
-            <p class="subtitle">Access premium student tools, expert consulting, and master life in Germany—curated for the Telugu Community.</p>
-            <a href="https://smartdealfinds.com" class="btn btn-main">Explore Smart Deals Finds</a>
-            
-            <div class="yt-counter">
-                <span class="label">Live YouTube Subscribers</span>
-                <div class="yt-flex">
-                    <img src="https://via.placeholder.com/50" alt="NextGen Living">
-                    <div>
-                        <div class="name">NextGen Living</div>
-                        <div class="count">10,126</div>
-                    </div>
+        <nav>
+            <div class="logo">videsi-<span>Srinivas</span></div>
+            <div>
+                <a href="https://youtube.com/@videsi-srinivas" class="btn btn-outline" style="padding: 10px 20px;">YouTube</a>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <span class="badge">Europe & Germany Guide</span>
+            <h1>Your Gateway to Life,<br>Work & Study in Germany</h1>
+            <p>Comprehensive guidance for the Indian community in Telugu & Hindi. Master the visa process, find the right university, and secure your career in Europe.</p>
+            <div class="btn-group">
+                <a href="https://youtube.com/@videsi-srinivas" class="btn btn-primary">Watch Full Guides</a>
+                <a href="#resources" class="btn btn-outline">Free Student Resources</a>
+            </div>
+        </section>
+
+        <section class="yt-preview">
+            <div class="yt-info">
+                <img src="https://yt3.ggpht.com/gaHZ80PMrg8ddm-vllOR_M1SigNPLj_mNXAGmb3B0x6B16xqWJITyRO0VxQnK7rI7W5BGpvvTP8=s88-c-k-c0x00ffffff-no-rj" alt="videsi-Srinivas">
+                <div class="yt-stats">
+                    <p class="name">videsi-Srinivas</p>
+                    <span class="sub-count">10,126+</span>
+                    <span class="label">Subscribers Helping Each Other</span>
                 </div>
             </div>
-        </header>
+            <a href="https://youtube.com/@videsi-srinivas" class="btn btn-primary">Join the Community</a>
+        </section>
 
-        <h2 class="section-header">Free Tools for Students</h2>
-        <p class="subtitle">Everything you need to organize your life and studies in Germany.</p>
-        
+        <h2 class="section-title" id="resources">Educational Resources</h2>
         <div class="grid">
-            <a href="#" class="glass-card">
-                <span class="card-icon">📊</span>
-                <h3>German Grade Calculator</h3>
-                <p>Convert your CGPA or Percentage to the German scale instantly.</p>
-                <span class="btn btn-card">Open Tool</span>
+            <a href="http://www.youtube.com/playlist?list=PLfoEcrW1dWHTB8lDKU2Cl-b1CrdlrCd3m" class="resource-card">
+                <span class="card-tag">Hindi Guide</span>
+                <h3>Study & PR in Germany</h3>
+                <p>Complete information about studies, jobs, and Permanent Residency (PR) in Germany explained in Hindi.</p>
+                <span class="card-link">View Playlist &rarr;</span>
             </a>
             
-            <a href="#" class="glass-card">
-                <span class="card-icon">🎓</span>
-                <h3>ECTS Calculator</h3>
-                <p>Verify if your degree meets strict ECTS requirements.</p>
-                <span class="btn btn-card">Open Tool</span>
+            <a href="http://www.youtube.com/playlist?list=PLfoEcrW1dWHTJhtZLTDyqajvx9IsTsyWf" class="resource-card">
+                <span class="card-tag">Telugu Guide</span>
+                <h3>Germany Masterclass</h3>
+                <p>A dedicated guide for the Telugu community covering university shortlisting and visa interview preparation.</p>
+                <span class="card-link">View Playlist &rarr;</span>
             </a>
             
-            <a href="#" class="glass-card">
-                <span class="card-icon">🏠</span>
-                <h3>WG Message Generator</h3>
-                <p>Generate perfect German emails to find housing quickly.</p>
-                <span class="btn btn-card">Open Tool</span>
-            </a>
-            
-            <a href="#" class="glass-card">
-                <span class="card-icon">📋</span>
-                <h3>Packing Checklist</h3>
-                <p>The ultimate master packing list from India to Germany.</p>
-                <span class="btn btn-card">Open Tool</span>
+            <a href="http://www.youtube.com/playlist?list=PLfoEcrW1dWHRJ9NivG_OYordItL48OPIk" class="resource-card">
+                <span class="card-tag">Interactive Sessions</span>
+                <h3>Live Q&A Archive</h3>
+                <p>Access recorded live sessions where we answer real questions from students and job seekers.</p>
+                <span class="card-link">Watch Sessions &rarr;</span>
             </a>
         </div>
 
-        <h2 class="section-header">Connect & Grow</h2>
-        <p class="subtitle">Join our communities for daily updates and exclusive offers.</p>
-        
-        <div class="grid">
-            <a href="#" class="glass-card">
-                <span class="card-icon">💬</span>
-                <h3>German Language Group</h3>
-                <p>Learn German with our dedicated community group.</p>
-                <span class="btn btn-card">Join Group</span>
-            </a>
-            
-            <a href="#" class="glass-card">
-                <span class="card-icon">📲</span>
-                <h3>Telegram Channel</h3>
-                <p>Real-time updates, resources, and community chat.</p>
-                <span class="btn btn-card">Join Channel</span>
-            </a>
-            
-            <a href="#" class="glass-card">
-                <span class="card-icon">🏦</span>
-                <h3>Student Banking Offer</h3>
-                <p>Access exclusive student credit limits up to €6000.</p>
-                <span class="btn btn-card">View Offers</span>
-            </a>
-        </div>
-    </div>
+        <section class="community-footer">
+            <div class="footer-content">
+                <h2>Join the Community</h2>
+                <p>Direct support for students and job seekers. Get updates on visa slots, university deadlines, and part-time job opportunities.</p>
+            </div>
+            <div class="footer-action">
+                <span style="font-weight: 700; color: var(--text-light); text-transform: uppercase; font-size: 0.8rem;">Official Support</span>
+                <span style="display: block; font-size: 1.5rem; font-weight: 800; margin: 10px 0;">WhatsApp Group</span>
+                <a href="#" class="wa-link">Join WhatsApp Group</a>
+            </div>
+        </section>
 
-    <div class="footer-section">
-        <div class="footer-flex">
-            <div class="footer-text">
-                <h2>Need Help or Have Questions?</h2>
-                <p>Our support team is ready to assist you with university admissions, visa consulting, and professional guidance.</p>
-            </div>
-            
-            <div class="footer-cta">
-                <span class="contact-line">WhatsApp us at</span>
-                <span class="phone">+49 123 456 7890</span> <a href="#" class="btn btn-whatsapp">Chat on WhatsApp</a>
-            </div>
-        </div>
-        <div class="copyright">
-            © 2026 NextGen Living | By Sri. All rights reserved.
-        </div>
+        <footer style="margin-top: 60px; text-align: center; color: var(--text-light); font-size: 0.9rem; padding-bottom: 40px;">
+            © 2026 videsi-Srinivas. Empowering the Indian Community in Europe.
+        </footer>
     </div>
 </body>
 </html>
