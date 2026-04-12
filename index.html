@@ -6,53 +6,68 @@
     <title>videsi-Srinivas | Study & Work in Germany Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #004a99; --accent: #e53e3e; --text-dark: #1a202c; --text-light: #4a5568; --bg-gray: #f8fafc; }
+        :root { --primary: #004a99; --accent: #e53e3e; --text-dark: #1a202c; --text-light: #4a5568; --bg-gray: #f8fafc; --success: #25d366; }
         body { margin: 0; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--text-dark); line-height: 1.6; scroll-behavior: smooth; }
         .container { max-width: 1100px; margin: auto; padding: 20px; }
         
         /* Navigation */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #e2e8f0; margin-bottom: 40px; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #e2e8f0; margin-bottom: 40px; flex-wrap: wrap; gap: 15px; }
         .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); text-decoration: none; }
         .logo span { color: var(--accent); }
+        .nav-btns { display: flex; gap: 10px; }
 
         /* Hero */
-        .hero { text-align: center; padding: 60px 0; background: linear-gradient(to bottom, #ffffff, #f1f5f9); border-radius: 30px; margin-bottom: 40px; }
+        .hero { text-align: center; padding: 80px 0; background: linear-gradient(to bottom, #ffffff, #f1f5f9); border-radius: 30px; margin-bottom: 40px; }
         .badge { background: #fee2e2; color: var(--accent); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; display: inline-block; margin-bottom: 20px; }
         h1 { font-size: 3.5rem; line-height: 1.1; margin: 10px 0; font-weight: 800; }
-        .hero p { font-size: 1.2rem; color: var(--text-light); max-width: 700px; margin: 20px auto 40px; }
+        .hero p { font-size: 1.2rem; color: var(--text-light); max-width: 750px; margin: 20px auto 40px; }
         
         /* Buttons */
-        .btn { padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: 0.2s; display: inline-block; border: none; cursor: pointer; }
+        .btn { padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: 0.2s; display: inline-block; border: none; cursor: pointer; font-size: 0.95rem; }
         .btn-primary { background: var(--primary); color: white; }
-        .btn-primary:hover { background: #003a7a; transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 74, 153, 0.3); }
-        .btn-outline { border: 2px solid #e2e8f0; color: var(--text-dark); margin-left: 10px; }
+        .btn-primary:hover { background: #003a7a; transform: translateY(-2px); box-shadow: 0 10px 15px rgba(0, 74, 153, 0.2); }
+        .btn-outline { border: 2px solid #e2e8f0; color: var(--text-dark); }
+        .btn-outline:hover { background: white; border-color: var(--primary); }
 
-        /* YouTube Channel Card */
-        .yt-preview { background: white; border: 1px solid #e2e8f0; border-radius: 20px; padding: 30px; margin: -50px auto 60px; max-width: 600px; display: flex; align-items: center; gap: 25px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
-        .yt-preview img { width: 70px; height: 70px; border-radius: 50%; border: 3px solid #f1f5f9; }
-        .yt-stats .name { font-size: 1.2rem; font-weight: 800; margin: 0; }
-        .yt-stats .sub-count { font-size: 1.8rem; font-weight: 800; color: var(--accent); display: block; }
-        .yt-stats .label { color: var(--text-light); font-size: 0.85rem; font-weight: 600; }
+        /* YouTube Card */
+        .yt-preview { background: white; border: 1px solid #e2e8f0; border-radius: 20px; padding: 25px; margin: -60px auto 60px; max-width: 550px; display: flex; align-items: center; gap: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .yt-preview img { width: 65px; height: 65px; border-radius: 50%; border: 3px solid #f1f5f9; }
+        .yt-stats .name { font-size: 1.1rem; font-weight: 800; margin: 0; }
+        .yt-stats .sub-count { font-size: 1.7rem; font-weight: 800; color: var(--accent); display: block; line-height: 1.2; }
+        .yt-stats .label { color: var(--text-light); font-size: 0.8rem; font-weight: 600; }
 
-        /* Resource Grid */
-        .section-title { font-size: 2rem; font-weight: 800; margin: 60px 0 30px; text-align: left; }
+        /* Section Titles */
+        .section-header { margin: 80px 0 40px; text-align: left; }
+        .section-header h2 { font-size: 2.2rem; font-weight: 800; margin: 0; color: var(--primary); }
+        .section-header p { color: var(--text-light); margin: 5px 0 0; }
+
+        /* Grids & Cards */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        .card { background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; transition: 0.3s; text-decoration: none; color: inherit; position: relative; overflow: hidden; }
-        .card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); }
-        .card h3 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.3rem; }
-        .card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; }
-        .card-footer { font-weight: 700; color: var(--accent); font-size: 0.9rem; display: flex; align-items: center; gap: 5px; }
+        .card { background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; transition: 0.3s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+        .card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+        .card h3 { margin: 0 0 12px 0; font-size: 1.3rem; color: var(--text-dark); }
+        .card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
+        .card-link { font-weight: 700; color: var(--primary); font-size: 0.9rem; }
 
-        /* Support Section */
-        .footer-cta { background: var(--text-dark); color: white; border-radius: 24px; padding: 50px; margin: 80px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; }
-        .footer-cta h2 { font-size: 2rem; margin: 0 0 10px 0; }
-        .footer-cta p { color: #94a3b8; margin: 0; }
-        .contact-box { background: white; color: var(--text-dark); padding: 30px; border-radius: 16px; text-align: center; min-width: 250px; }
-        .wa-btn { background: #25d366; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; display: block; margin-top: 15px; font-weight: 700; }
+        /* Icons */
+        .icon { font-size: 1.5rem; margin-bottom: 15px; display: block; }
+
+        /* Support / Social Footer */
+        .footer-cta { background: var(--text-dark); color: white; border-radius: 24px; padding: 60px; margin: 100px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px; }
+        .footer-info h2 { font-size: 2.5rem; margin: 0 0 10px 0; }
+        .footer-info p { color: #94a3b8; font-size: 1.1rem; }
+        .contact-card { background: white; color: var(--text-dark); padding: 35px; border-radius: 20px; text-align: center; min-width: 300px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        .wa-btn { background: var(--success); color: white; padding: 15px; border-radius: 8px; text-decoration: none; display: block; margin-top: 20px; font-weight: 700; font-size: 1.1rem; }
+        
+        /* Social Links */
+        .social-row { display: flex; justify-content: center; gap: 20px; margin-top: 40px; }
+        .social-row a { color: var(--text-light); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .social-row a:hover { color: var(--primary); }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .footer-cta { text-align: center; justify-content: center; }
+            h1 { font-size: 2.4rem; }
+            nav { justify-content: center; text-align: center; }
+            .footer-cta { text-align: center; justify-content: center; padding: 40px 20px; }
         }
     </style>
 </head>
@@ -61,69 +76,97 @@
 <div class="container">
     <nav>
         <a href="#" class="logo">videsi-<span>Srinivas</span></a>
-        <div class="nav-links">
-            <a href="https://topmate.io/videsi_srinivas" class="btn btn-primary" style="padding: 10px 20px;">1-1 Session</a>
-            <a href="https://youtube.com/@videsi-srinivas" class="btn btn-outline" style="padding: 10px 20px;">YouTube</a>
+        <div class="nav-btns">
+            <a href="https://topmate.io/srinivasarao_aluri" class="btn btn-primary">1-1 Session</a>
+            <a href="https://youtube.com/@videsi-srinivas" class="btn btn-outline">YouTube</a>
         </div>
     </nav>
-</style>
-    /* Updated Navigation for two buttons */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #e2e8f0; margin-bottom: 40px; flex-wrap: wrap; gap: 15px; }
-        .nav-links { display: flex; gap: 10px; align-items: center; }
+
     <section class="hero">
-        <span class="badge">Study & Work in Europe</span>
-        <h1>Empowering Indians to<br>Succeed in Germany</h1>
-        <p>Reliable guidance on University admissions, Visa processes, and Job searching. Curated specially for the Telugu and Hindi speaking community.</p>
+        <span class="badge">Europe & Germany Masterguide</span>
+        <h1>Build Your Future in<br>Germany & Europe</h1>
+        <p>Expert advice on Study, Work, and Life in Europe. Helping Indians navigate the visa process and career opportunities through Telugu & Hindi guides.</p>
         <div class="btn-group">
-            <a href="#resources" class="btn btn-primary">Browse Playlists</a>
-            <a href="https://youtube.com/@videsi-srinivas" class="btn btn-outline">Subscribe Now</a>
+            <a href="https://whatsapp.com/channel/0029Vb7fJAmGpLHWupn21y0u" class="btn btn-primary" style="background: var(--success);">Join WhatsApp Channel</a>
+            <a href="https://smartdealfinds.com/" class="btn btn-outline" style="margin-left: 10px;">Smart Deals Finds</a>
         </div>
     </section>
 
     <div class="yt-preview">
-        <img src="https://yt3.ggpht.com/gaHZ80PMrg8ddm-vllOR_M1SigNPLj_mNXAGmb3B0x6B16xqWJITyRO0VxQnK7rI7W5BGpvvTP8=s88-c-k-c0x00ffffff-no-rj" alt="Logo">
+        <img src="https://yt3.ggpht.com/gaHZ80PMrg8ddm-vllOR_M1SigNPLj_mNXAGmb3B0x6B16xqWJITyRO0VxQnK7rI7W5BGpvvTP8=s88-c-k-c0x00ffffff-no-rj" alt="videsi-Srinivas">
         <div class="yt-stats">
             <p class="name">videsi-Srinivas</p>
             <span class="sub-count">10,126+</span>
-            <span class="label">Subscribers Helping Each Other</span>
+            <span class="label">Subscribers on YouTube</span>
         </div>
     </div>
 
-    <h2 class="section-title" id="resources">Expert Playlists</h2>
+    <div class="section-header">
+        <h2>Free Tools for Students</h2>
+        <p>Essential calculators and checklists for your journey to Germany.</p>
+    </div>
     <div class="grid">
-        <a href="https://www.youtube.com/playlist?list=PLfoEcrW1dWHTB8lDKU2Cl-b1CrdlrCd3m" class="card">
-            <h3>Germany Study & Jobs (Hindi)</h3>
-            <p>A complete guide to studies, job searching, and PR requirements explained in Hindi.</p>
-            <div class="card-footer">Watch Playlist →</div>
+        <a href="#" class="card">
+            <span class="icon">📊</span>
+            <h3>German Grade Converter</h3>
+            <p>Convert your Indian CGPA/Percentage to the German "Bavarian" scale instantly.</p>
+            <span class="card-link">Launch Tool →</span>
         </a>
-
-        <a href="https://www.youtube.com/playlist?list=PLfoEcrW1dWHTJhtZLTDyqajvx9IsTsyWf" class="card">
-            <h3>Germany Guide (Telugu)</h3>
-            <p>University shortlisting, visa interview prep, and life abroad for Telugu students.</p>
-            <div class="card-footer">Watch Playlist →</div>
+        <a href="#" class="card">
+            <span class="icon">🎓</span>
+            <h3>ECTS Calculator</h3>
+            <p>Calculate your credits to ensure you meet German university requirements.</p>
+            <span class="card-link">Check Credits →</span>
         </a>
+        <a href="#" class="card">
+            <span class="icon">📦</span>
+            <h3>First-Time Packing List</h3>
+            <p>Complete list of spices, clothes, and documents to carry from India.</p>
+            <span class="card-link">View Checklist →</span>
+        </a>
+    </div>
 
-        <a href="https://www.youtube.com/playlist?list=PLfoEcrW1dWHRJ9NivG_OYordItL48OPIk" class="card">
-            <h3>Live Q&A Sessions</h3>
-            <p>Catch up on our weekly live streams where we solve student doubts in real-time.</p>
-            <div class="card-footer">Watch Sessions →</div>
+    <div class="section-header">
+        <h2>Tools for Full-Time Employees</h2>
+        <p>Resources for professionals working or looking for jobs in Europe.</p>
+    </div>
+    <div class="grid">
+        <a href="#" class="card">
+            <span class="icon">💼</span>
+            <h3>German CV/Resume Builder</h3>
+            <p>Create a job-ready resume in the professional German "Lebenslauf" format.</p>
+            <span class="card-link">Start Building →</span>
+        </a>
+        <a href="#" class="card">
+            <span class="icon">💶</span>
+            <h3>Net Salary Estimator</h3>
+            <p>Calculate your take-home pay after German taxes and social security.</p>
+            <span class="card-link">Estimate Salary →</span>
         </a>
     </div>
 
     <section class="footer-cta">
-        <div>
-            <h2>Need Direct Help?</h2>
-            <p>Join our community for visa slot alerts and university updates.</p>
+        <div class="footer-info">
+            <h2>Need Direct Support?</h2>
+            <p>Book a session for Profile Evaluation, SOP Review, or Visa Guidance.</p>
         </div>
-        <div class="contact-box">
-            <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-light);">WHATSAPP SUPPORT</span>
-            <div style="font-size: 1.4rem; font-weight: 800; margin: 5px 0;">Join Official Group</div>
-            <a href="https://whatsapp.com/channel/0029Vb7fJAmGpLHWupn21y0u" class="wa-btn">Join Now</a>
+        <div class="contact-card">
+            <span style="font-weight: 700; color: var(--text-light); text-transform: uppercase; font-size: 0.8rem;">Official Support</span>
+            <div style="font-size: 1.6rem; font-weight: 800; margin: 10px 0;">videsi-Srinivas Hub</div>
+            <a href="https://whatsapp.com/channel/0029Vb7fJAmGpLHWupn21y0u" class="wa-btn">Join WhatsApp Channel</a>
+            <a href="https://topmate.io/srinivasarao_aluri" style="display: block; margin-top: 15px; color: var(--primary); text-decoration: none; font-weight: 700;">Book 1-1 Video Call</a>
         </div>
     </section>
 
-    <footer style="text-align: center; color: var(--text-light); font-size: 0.85rem; padding-bottom: 40px;">
-        © 2026 videsi-Srinivas. Helping you build a future in Europe.
+    <div class="social-row">
+        <a href="https://youtube.com/@videsi-srinivas">YouTube</a>
+        <a href="https://www.instagram.com/videsi_srinivas">Instagram</a>
+        <a href="https://smartdealfinds.com/">Smart Deals</a>
+        <a href="https://topmate.io/srinivasarao_aluri">Consulting</a>
+    </div>
+
+    <footer style="margin-top: 40px; text-align: center; color: var(--text-light); font-size: 0.85rem; padding-bottom: 40px; border-top: 1px solid #eee; padding-top: 30px;">
+        © 2026 videsi-Srinivas. Empowering your European journey.
     </footer>
 </div>
 
