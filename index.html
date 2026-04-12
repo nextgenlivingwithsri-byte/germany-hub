@@ -3,41 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Germany Community Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>NextGen Living | Germany Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f4f7f6; margin: 0; color: #333; text-align: center; }
-        .container { max-width: 800px; margin: auto; padding: 40px 20px; }
-        header { margin-bottom: 40px; }
-        h1 { color: #004a99; margin-bottom: 10px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; text-decoration: none; color: inherit; display: block; border: 1px solid transparent; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 1px solid #004a99; }
-        .card h3 { margin-top: 0; color: #004a99; }
-        .btn-main { background: #ff0000; color: white; padding: 12px 25px; text-decoration: none; border-radius: 30px; font-weight: bold; display: inline-block; margin-top: 10px; }
+        /* --- GLOBAL THEME --- */
+        body { margin: 0; font-family: 'Poppins', sans-serif; color: #fff; line-height: 1.6; background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #312e81 100%); background-attachment: fixed; }
+        .container { max-width: 1200px; margin: auto; padding: 60px 20px; text-align: center; }
+        
+        /* --- TEXT & TITLES --- */
+        h1, h2, h3 { font-weight: 700; color: #fff; margin-bottom: 10px; }
+        h1 { font-size: 3rem; background: linear-gradient(to right, #2dd4bf, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-top: 10px; }
+        .subtitle { font-size: 1.2rem; color: #cbd5e1; max-width: 700px; margin: auto; margin-bottom: 40px; font-weight: 300; }
+        .section-header { font-size: 2.5rem; margin-top: 80px; margin-bottom: 10px; }
+        
+        /* --- BUTTONS --- */
+        .btn { display: inline-block; padding: 15px 35px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: 0.3s; position: relative; overflow: hidden; }
+        /* Main Call to Action Button: Teal Gradient */
+        .btn-main { background: linear-gradient(45deg, #2dd4bf, #0d9488); color: #fff; box-shadow: 0 4px 15px rgba(45, 212, 191, 0.3); }
+        .btn-main:hover { box-shadow: 0 8px 25px rgba(45, 212, 191, 0.5); transform: translateY(-2px); }
+        
+        /* Standard Card Button: Indigo Gradient */
+        .btn-card { background: linear-gradient(45deg, #4f46e5, #3730a3); color: #fff; font-size: 0.9rem; padding: 10px 25px; margin-top: 15px; }
+        
+        /* Green Chat on WhatsApp Button */
+        .btn-whatsapp { background: linear-gradient(45deg, #22c55e, #16a34a); color: #fff; }
+
+        /* --- THE HERO & COMMUNITY COUNTER --- */
+        header { padding-bottom: 60px; position: relative; }
+        .community-badge { background: rgba(255, 255, 255, 0.1); display: inline-block; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; color: #a5b4fc; border: 1px solid rgba(255, 255, 255, 0.1); }
+        .yt-counter { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); width: 320px; margin: 60px auto; padding: 25px; border-radius: 20px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .yt-counter .label { font-size: 0.75rem; text-transform: uppercase; color: #94a3b8; font-weight: 600; text-align: center; display: block; margin-bottom: 15px; }
+        .yt-flex { display: flex; align-items: center; gap: 15px; }
+        .yt-flex img { width: 50px; height: 50px; border-radius: 50%; }
+        .yt-flex .name { font-weight: 600; font-size: 1.1rem; }
+        .yt-flex .count { font-size: 2rem; font-weight: 700; color: #fff; }
+
+        /* --- GRIDS & CARDS --- */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .glass-card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 24px; padding: 35px; text-align: left; transition: all 0.3s ease-in-out; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+        .glass-card:hover { transform: translateY(-8px); background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(45, 212, 191, 0.4); box-shadow: 0 15px 40px rgba(0,0,0,0.4); }
+        .glass-card:hover h3 { color: #2dd4bf; }
+        .glass-card h3 { color: #fff; font-size: 1.4rem; transition: 0.3s; margin-top: 15px; }
+        .glass-card p { color: #cbd5e1; font-size: 0.95rem; font-weight: 300; flex-grow: 1; margin-bottom: 20px; }
+        
+        /* Icons for cards */
+        .card-icon { font-size: 2.5rem; background: linear-gradient(135deg, #a5b4fc, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* --- THE ENGAGING FOOTER & CONNECT SECTION --- */
+        .footer-section { background: rgba(15, 23, 42, 0.6); margin-top: 100px; padding: 80px 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+        .footer-flex { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; max-width: 1000px; margin: auto; }
+        .footer-text { text-align: left; flex: 1; min-width: 300px; }
+        .footer-text h2 { font-size: 2.2rem; }
+        .footer-text p { color: #cbd5e1; font-weight: 300; }
+        .footer-cta { background: white; color: #1e293b; padding: 40px; border-radius: 24px; box-shadow: 0 15px 50px rgba(0,0,0,0.3); text-align: center; width: 300px; }
+        .footer-cta .contact-line { font-weight: 600; font-size: 0.9rem; text-transform: uppercase; color: #64748b; }
+        .footer-cta .phone { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin: 10px 0 20px 0; display: block; }
+        .copyright { margin-top: 60px; color: #64748b; font-size: 0.8rem; font-weight: 300; }
+
+        /* Responsive adjustments for phone screens */
+        @media (max-width: 768px) { h1 { font-size: 2.2rem; } .section-header { font-size: 1.8rem; } .footer-flex { flex-direction: column; text-align: center; } .footer-text { text-align: center; } }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Namaste! 🙏</h1>
-            <p>Welcome to my official resources hub for the Telugu community in Germany.</p>
-            <a href="https://www.youtube.com/@YourChannel" class="btn-main">Subscribe on YouTube</a>
+            <div class="community-badge">Join over 10,000+ Students</div>
+            <h1>Your Gateway to<br>Germany & Europe</h1>
+            <p class="subtitle">Access premium student tools, expert consulting, and master life in Germany—curated for the Telugu Community.</p>
+            <a href="https://smartdealfinds.com" class="btn btn-main">Explore Smart Deals Finds</a>
+            
+            <div class="yt-counter">
+                <span class="label">Live YouTube Subscribers</span>
+                <div class="yt-flex">
+                    <img src="https://via.placeholder.com/50" alt="NextGen Living">
+                    <div>
+                        <div class="name">NextGen Living</div>
+                        <div class="count">10,126</div>
+                    </div>
+                </div>
+            </div>
         </header>
 
+        <h2 class="section-header">Free Tools for Students</h2>
+        <p class="subtitle">Everything you need to organize your life and studies in Germany.</p>
+        
         <div class="grid">
-            <a href="https://smartdealfinds.com" class="card">
-                <h3>🛍️ Smart Deal Finds</h3>
-                <p>Best curated deals from USA & Europe for your home and lifestyle.</p>
+            <a href="#" class="glass-card">
+                <span class="card-icon">📊</span>
+                <h3>German Grade Calculator</h3>
+                <p>Convert your CGPA or Percentage to the German scale instantly.</p>
+                <span class="btn btn-card">Open Tool</span>
             </a>
-            <a href="#" class="card">
-                <h3>💬 WhatsApp Community</h3>
-                <p>Join our group for real-time updates and discussions.</p>
+            
+            <a href="#" class="glass-card">
+                <span class="card-icon">🎓</span>
+                <h3>ECTS Calculator</h3>
+                <p>Verify if your degree meets strict ECTS requirements.</p>
+                <span class="btn btn-card">Open Tool</span>
             </a>
-            <a href="#" class="card">
-                <h3>📜 Life in Germany</h3>
-                <p>Checklists and guides for students and professionals.</p>
+            
+            <a href="#" class="glass-card">
+                <span class="card-icon">🏠</span>
+                <h3>WG Message Generator</h3>
+                <p>Generate perfect German emails to find housing quickly.</p>
+                <span class="btn btn-card">Open Tool</span>
             </a>
+            
+            <a href="#" class="glass-card">
+                <span class="card-icon">📋</span>
+                <h3>Packing Checklist</h3>
+                <p>The ultimate master packing list from India to Germany.</p>
+                <span class="btn btn-card">Open Tool</span>
+            </a>
+        </div>
+
+        <h2 class="section-header">Connect & Grow</h2>
+        <p class="subtitle">Join our communities for daily updates and exclusive offers.</p>
+        
+        <div class="grid">
+            <a href="#" class="glass-card">
+                <span class="card-icon">💬</span>
+                <h3>German Language Group</h3>
+                <p>Learn German with our dedicated community group.</p>
+                <span class="btn btn-card">Join Group</span>
+            </a>
+            
+            <a href="#" class="glass-card">
+                <span class="card-icon">📲</span>
+                <h3>Telegram Channel</h3>
+                <p>Real-time updates, resources, and community chat.</p>
+                <span class="btn btn-card">Join Channel</span>
+            </a>
+            
+            <a href="#" class="glass-card">
+                <span class="card-icon">🏦</span>
+                <h3>Student Banking Offer</h3>
+                <p>Access exclusive student credit limits up to €6000.</p>
+                <span class="btn btn-card">View Offers</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <div class="footer-flex">
+            <div class="footer-text">
+                <h2>Need Help or Have Questions?</h2>
+                <p>Our support team is ready to assist you with university admissions, visa consulting, and professional guidance.</p>
+            </div>
+            
+            <div class="footer-cta">
+                <span class="contact-line">WhatsApp us at</span>
+                <span class="phone">+49 123 456 7890</span> <a href="#" class="btn btn-whatsapp">Chat on WhatsApp</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 NextGen Living | By Sri. All rights reserved.
         </div>
     </div>
 </body>
