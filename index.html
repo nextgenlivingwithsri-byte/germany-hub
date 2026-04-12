@@ -10,7 +10,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #004a99; --accent: #e53e3e; --text-dark: #1a202c; --text-light: #4a5568; --bg-gray: #f8fafc; --success: #25d366; }
+        :root { --primary: #004a99; --accent: #e53e3e; --text-dark: #1a202c; --text-light: #4a5568; --bg-gray: #f8fafc; --success: #25d366; --linkedin: #0077b5; }
         body { margin: 0; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--text-dark); line-height: 1.6; scroll-behavior: smooth; }
         .container { max-width: 1100px; margin: auto; padding: 20px; }
         
@@ -32,7 +32,7 @@
         .btn-primary { background: var(--primary); color: white; }
         .btn-outline { border: 2px solid #e2e8f0; color: var(--text-dark); background: white; }
 
-        /* YouTube Card - FIXED MARGIN */
+        /* YouTube Card */
         .yt-preview { 
             background: white; border: 1px solid #e2e8f0; border-radius: 20px; padding: 25px; 
             margin: 40px auto; max-width: 550px; display: flex; align-items: center; 
@@ -45,11 +45,11 @@
 
         /* Success Stories */
         .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
-        .testimonial-card { background: #fff; border: 1px solid #e2e8f0; padding: 25px; border-radius: 15px; text-align: left; font-style: italic; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .testimonial-card { background: #fff; border: 1px solid #e2e8f0; padding: 25px; border-radius: 15px; text-align: left; font-style: italic; }
         .student-name { display: block; margin-top: 15px; font-weight: 700; color: var(--primary); font-style: normal; }
 
         /* Grids & Cards */
-        .section-header { margin: 60px 0 30px; text-align: left; }
+        .section-header { margin: 80px 0 40px; text-align: left; }
         .section-header h2 { font-size: 2.2rem; font-weight: 800; margin: 0; color: var(--primary); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
         .card { background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; transition: 0.3s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
@@ -64,6 +64,7 @@
         .wa-btn { background: var(--success); color: white; padding: 15px; border-radius: 8px; text-decoration: none; display: block; margin-top: 20px; font-weight: 700; }
         .social-row { display: flex; justify-content: center; gap: 25px; margin-top: 40px; padding-bottom: 40px; flex-wrap: wrap; }
         .social-row a { color: var(--text-light); text-decoration: none; font-weight: 600; font-size: 1rem; }
+        .social-row a:hover { color: var(--primary); }
 
         @media (max-width: 768px) {
             h1 { font-size: 2.4rem; }
@@ -97,10 +98,10 @@
     </section>
 
     <div class="yt-preview">
-        <img src="http://yt3.googleusercontent.com/gaHZ80PMrg8ddm-vllOR_M1SigNPLj_mNXAGmb3B0x6B16xqWJITyRO0VxQnK7rI7W5BGpvvTP8=s160-c-k-c0x00ffffff-no-rj" alt="videsi-Srinivas">
+        <img src="https://yt3.ggpht.com/gaHZ80PMrg8ddm-vllOR_M1SigNPLj_mNXAGmb3B0x6B16xqWJITyRO0VxQnK7rI7W5BGpvvTP8=s88-c-k-c0x00ffffff-no-rj" alt="videsi-Srinivas">
         <div class="yt-stats">
             <p class="name">videsi-Srinivas (Germany Guide)</p>
-            <span class="sub-count">5,000+</span>
+            <span class="sub-count">10,126+</span>
             <span class="label">Subscribers on YouTube</span>
         </div>
     </div>
@@ -118,8 +119,8 @@
             <span class="student-name">- Priyanka R., Job Seeker</span>
         </div>
         <div class="testimonial-card">
-            "Finally a reliable guide for the Telugu community. Honest advice without any sugar-coating."
-            <span class="student-name">- Rahul V., Berlin</span>
+            "Finally a reliable guide for the Telugu community. Check his professional background on LinkedIn."
+            <a href="https://www.linkedin.com/in/srinivas-aluri-3528ba228/" target="_blank" style="display:block; margin-top:10px; font-weight:700; color:#0077b5; text-decoration:none; font-style:normal;">Connect on LinkedIn →</a>
         </div>
     </div>
 
@@ -177,6 +178,7 @@
     <div class="social-row">
         <a href="https://youtube.com/@videsi-srinivas?si=B3YyMTrOq4INC8pb" target="_blank">YouTube</a>
         <a href="https://www.instagram.com/videsi_srinivas?igsh=eWd2cWx5ZmN2cWE%3D" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/srinivas-aluri-3528ba228/" target="_blank">LinkedIn</a>
         <a href="https://smartdealfinds.com/" target="_blank">Smart Deals</a>
         <a href="https://topmate.io/srinivasarao_aluri" target="_blank">Consulting</a>
     </div>
